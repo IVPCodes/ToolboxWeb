@@ -29,7 +29,7 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 20px;
     }
@@ -57,7 +57,7 @@
     .btn {
       display: inline-block;
       padding: 12px 25px;
-      margin-top: 10px;
+      margin: 8px;
       font-size: 1em;
       color: white;
       background: #4cafef;
@@ -81,6 +81,19 @@
       background: #3a3a3a;
     }
 
+    .info-box {
+      display: none;
+      text-align: left;
+      white-space: pre-wrap;
+      background: #101010;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 15px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+      font-size: 0.95em;
+      line-height: 1.4em;
+    }
+
     #olderVersions {
       display: none;
       margin-top: 20px;
@@ -97,63 +110,161 @@
 
 <body>
 
-  <header>
-    <h1>Toolbox Downloads</h1>
-    <p>Download the latest and older versions of Toolbox</p>
-  </header>
+<header>
+  <h1>Toolbox Downloads</h1>
+  <p>Download the latest and older versions of Toolbox</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <!-- NEWEST VERSION -->
-    <div class="card">
-      <div class="version-title">Latest Version — Toolbox 1.3.2</div>
-      <p>Recommended download (newest features & fixes)</p>
-      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.2/Toolbox1.3.2Installer.exe">
-        Download 1.3.2
-      </a>
-    </div>
+  <!-- NEWEST VERSION -->
+  <div class="card">
+    <div class="version-title">Latest Version — Toolbox 1.3.2</div>
+    <p>Recommended download (newest features & fixes)</p>
 
-    <!-- OLDER BUTTON -->
-    <button class="btn older-btn" onclick="toggleOlder()">
-      Older Versions
+    <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.2/Toolbox1.3.2Installer.exe">
+      Download 1.3.2
+    </a>
+
+    <button class="btn" onclick="toggleBox('changelogBox')">
+      Changelog
     </button>
 
-    <!-- OLDER VERSIONS LIST -->
-    <div id="olderVersions">
+    <button class="btn" onclick="toggleBox('featuresBox')">
+      What is included in Toolbox?
+    </button>
 
-      <div class="card">
-        <div class="version-title">Toolbox 1.3.1</div>
-        <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.1/Toolbox1.3.1Installer.exe">
-          Download 1.3.1
-        </a>
-      </div>
+    <!-- CHANGELOG BOX -->
+    <div id="changelogBox" class="info-box">
+Meet Toolbox – a Windows optimization tool packed with a wide array of powerful features.
+Programmed by just one Teen.
+Free Demo Licence Key is IVPDEMO
+If you have the full version key from the owner, you need to enter a password. The password is ToolboxGithub.
 
-      <div class="card">
-        <div class="version-title">Toolbox 1.3.0</div>
-        <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.0/Toolbox1.3.0Installer.exe">
-          Download 1.3.0
-        </a>
-      </div>
+⚠️ WARNING: Use this software at your own risk. We are not responsible for any damage, data loss, or other issues caused to your device.
 
+Run as Admin for the Optimizations to work!
+
+Source Code false positives:
+https://www.virustotal.com/gui/file/da10586ee32a4c221a7b133a8c9541972e85d4435527627a3b5a12eda20f6fe5?nocache=1
+
+Packaged File:
+https://www.virustotal.com/gui/file/768ee82b8c7f19c82dc7d21e3d5e7f49dfaca8234a392dfca868d9e27405ad75
+
+CHANGELOG
+For the Full Version of the App.
+Introduced a new installer for Toolbox (Work in Progress).
+Fixed some Bugs
+Added a new Account System for the Toolbox Login:
+https://github.com/IVPCodes/IVP-Code/blob/main/info.txt
+    </div>
+
+    <!-- FEATURES BOX -->
+    <div id="featuresBox" class="info-box">
+🧰 Toolbox — Feature List (1.3.2)
+
+🔐 Security & Access System
+License Key Authentication (Demo / Full)
+Base64-encoded License Validation
+Password-Protected Login
+Demo Mode with restricted features
+
+🎨 Interface & Customization
+15 Console Color Themes
+Light / Dark Variants
+Quick Theme Switching
+UI Title Branding
+Planned Plugin Reload System (WIP)
+
+🔌 Plugin System
+External .bat plugin loader
+Auto-detects /plugins folder
+Executes multiple plugins sequentially
+Expandable toolbox architecture
+
+🖥️ System Information Tools
+OS Name / Version / Architecture
+Windows Version Display
+Computer Name & Username
+Full System Information (extended)
+Hardware Audit
+
+🌐 Network & Internet Tools
+IPv4 Address Viewer
+Network Connection Test
+Website / IP Pinger
+DNS Flush
+TCP/IP Optimization
+
+⚡ Performance & Optimization
+Temp File Cleaner
+Windows Update Cache Cleaner
+Prefetch Cleaner
+Recycle Bin Cleaner
+Advanced Cleanup
+
+🚀 System Tweaks & Boosters
+Startup Optimizer
+Background Service Disabler
+RAM Optimizer
+SSD Performance Tuner
+Game Mode Shortcut
+
+📦 Software & Download Hub
+Discord
+Brave Browser
+GitHub Desktop
+Spotify
+Guilded
+
+🧾 Demo Version Features
+System Information
+IPv4 Viewer
+Info Panel
     </div>
 
   </div>
 
-  <footer>
-    © 2026 IVPCodes — Toolbox Project
-  </footer>
+  <!-- OLDER BUTTON -->
+  <button class="btn older-btn" onclick="toggleBox('olderVersions')">
+    Older Versions
+  </button>
 
-  <script>
-    function toggleOlder() {
-      var section = document.getElementById("olderVersions");
+  <!-- OLDER VERSIONS -->
+  <div id="olderVersions">
 
-      if (section.style.display === "none" || section.style.display === "") {
-        section.style.display = "block";
-      } else {
-        section.style.display = "none";
-      }
-    }
-  </script>
+    <div class="card">
+      <div class="version-title">Toolbox 1.3.1</div>
+      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.1/Toolbox1.3.1Installer.exe">
+        Download 1.3.1
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="version-title">Toolbox 1.3.0</div>
+      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.0/Toolbox1.3.0Installer.exe">
+        Download 1.3.0
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 IVPCodes — Toolbox Project
+</footer>
+
+<script>
+function toggleBox(id) {
+  var box = document.getElementById(id);
+  if (box.style.display === "none" || box.style.display === "") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
