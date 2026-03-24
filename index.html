@@ -1,228 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toolbox Downloads</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toolbox Downloads</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-      color: white;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: white;
+  text-align: center;
+}
 
-    header {
-      padding: 40px 20px;
-    }
+/* HEADER */
+header {
+  padding: 50px 20px;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #4cafef;
-    }
+h1 {
+  font-size: 3em;
+  background: linear-gradient(90deg, #4cafef, #00ffc8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    p {
-      color: #cfcfcf;
-    }
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
+/* GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 25px 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
 
-    .card {
-      background: #161616;
-      border-radius: 16px;
-      padding: 25px;
-      margin: 20px 0;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-      transition: 0.2s;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(0,0,0,0.9);
+}
 
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 30px rgba(0,0,0,0.9);
-    }
+/* VERSION */
+.version-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #4cafef;
+}
 
-    .version-title {
-      font-size: 1.6em;
-      margin-bottom: 10px;
-      color: #4cafef;
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  margin: 10px;
+  font-size: 1em;
+  color: white;
+  background: linear-gradient(90deg, #4cafef, #00ffc8);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 8px;
-      font-size: 1em;
-      color: white;
-      background: #4cafef;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
 
-    .btn:hover {
-      background: #2f8ed6;
-    }
+/* DOWNLOAD COUNTER */
+.counter {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #00ffc8;
+}
 
-    .older-btn {
-      background: #2a2a2a;
-      margin-top: 30px;
-    }
+/* INFO BOX */
+.info-box {
+  display: none;
+  text-align: left;
+  white-space: pre-wrap;
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 15px;
+}
 
-    .older-btn:hover {
-      background: #3a3a3a;
-    }
+/* OLDER */
+.older-btn {
+  background: #2a2a2a;
+}
 
-    .info-box {
-      display: none;
-      text-align: left;
-      white-space: pre-wrap;
-      background: #101010;
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 15px;
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
-      font-size: 0.95em;
-      line-height: 1.4em;
-    }
-
-    #olderVersions {
-      display: none;
-      margin-top: 20px;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      color: #777;
-      font-size: 0.9em;
-    }
-  </style>
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  color: #777;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Toolbox Downloads</h1>
-  <p>Download the latest and older versions of Toolbox</p>
+  <p>Modern Windows Optimization Tool</p>
 </header>
 
 <div class="container">
 
-  <!-- NEWEST VERSION -->
+  <!-- NEW VERSION -->
   <div class="card">
-    <div class="version-title">Latest Version — Toolbox 1.3.2</div>
-    <p>Recommended download (newest features & fixes)</p>
+    <div class="version-title">Toolbox 1.3.3</div>
+    <p>Latest release with improvements & fixes</p>
 
-    <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.2/Toolbox1.3.2Installer.exe">
-      Download 1.3.2
+    <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.3/Toolbox1.3.3Installer.exe">
+      Download
     </a>
 
     <button class="btn" onclick="toggleBox('changelogBox')">
       Changelog
     </button>
 
-    <button class="btn" onclick="toggleBox('featuresBox')">
-      What is included in Toolbox?
-    </button>
+    <!-- COUNTER -->
+    <div class="counter">
+      Downloads: <span id="downloadCount">134</span>
+    </div>
 
-    <!-- CHANGELOG BOX -->
+    <!-- CHANGELOG -->
     <div id="changelogBox" class="info-box">
-Meet Toolbox – a Windows optimization tool packed with a wide array of powerful features.
-Programmed by just one Teen.
-Free Demo Licence Key is IVPDEMO
-If you have the full version key from the owner, you need to enter a password. The password is ToolboxGithub.
+Meet Toolbox – a Windows optimization tool packed with powerful features.
+Programmed by one Teen.
 
-⚠️ WARNING: Use this software at your own risk. We are not responsible for any damage, data loss, or other issues caused to your device.
+⚠️ Use at your own risk.
 
-Run as Admin for the Optimizations to work!
+Run as Admin for optimizations!
 
-Source Code false positives:
-https://www.virustotal.com/gui/file/da10586ee32a4c221a7b133a8c9541972e85d4435527627a3b5a12eda20f6fe5?nocache=1
-
-Packaged File:
-https://www.virustotal.com/gui/file/768ee82b8c7f19c82dc7d21e3d5e7f49dfaca8234a392dfca868d9e27405ad75
-
-CHANGELOG
-For the Full Version of the App.
-Introduced a new installer for Toolbox (Work in Progress).
-Fixed some Bugs
-Added a new Account System for the Toolbox Login:
-https://github.com/IVPCodes/IVP-Code/blob/main/info.txt
+CHANGELOG:
+- New installer (WIP)
+- Demo re-added (enter "Demo")
+- Bug fixes
+- Removed error messages
+- New Account System
+- For Account help visit https://github.com/IVPCodes/IVP-Code/blob/main/info.txt
     </div>
-
-    <!-- FEATURES BOX -->
-    <div id="featuresBox" class="info-box">
-🧰 Toolbox — Feature List (1.3.2)
-
-🔐 Security & Access System
-License Key Authentication (Demo / Full)
-Base64-encoded License Validation
-Password-Protected Login
-Demo Mode with restricted features
-
-🎨 Interface & Customization
-15 Console Color Themes
-Light / Dark Variants
-Quick Theme Switching
-UI Title Branding
-Planned Plugin Reload System (WIP)
-
-🔌 Plugin System
-External .bat plugin loader
-Auto-detects /plugins folder
-Executes multiple plugins sequentially
-Expandable toolbox architecture
-
-🖥️ System Information Tools
-OS Name / Version / Architecture
-Windows Version Display
-Computer Name & Username
-Full System Information (extended)
-Hardware Audit
-
-🌐 Network & Internet Tools
-IPv4 Address Viewer
-Network Connection Test
-Website / IP Pinger
-DNS Flush
-TCP/IP Optimization
-
-⚡ Performance & Optimization
-Temp File Cleaner
-Windows Update Cache Cleaner
-Prefetch Cleaner
-Recycle Bin Cleaner
-Advanced Cleanup
-
-🚀 System Tweaks & Boosters
-Startup Optimizer
-Background Service Disabler
-RAM Optimizer
-SSD Performance Tuner
-Game Mode Shortcut
-
-📦 Software & Download Hub
-Discord
-Brave Browser
-GitHub Desktop
-Spotify
-Guilded
-
-🧾 Demo Version Features
-System Information
-IPv4 Viewer
-Info Panel
-    </div>
-
   </div>
 
   <!-- OLDER BUTTON -->
@@ -230,20 +159,20 @@ Info Panel
     Older Versions
   </button>
 
-  <!-- OLDER VERSIONS -->
-  <div id="olderVersions">
+  <!-- OLDER -->
+  <div id="olderVersions" style="display:none;">
 
     <div class="card">
-      <div class="version-title">Toolbox 1.3.1</div>
-      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.1/Toolbox1.3.1Installer.exe">
-        Download 1.3.1
+      <div class="version-title">Toolbox 1.3.2</div>
+      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.2/Toolbox1.3.2Installer.exe">
+        Download
       </a>
     </div>
 
     <div class="card">
-      <div class="version-title">Toolbox 1.3.0</div>
-      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.0/Toolbox1.3.0Installer.exe">
-        Download 1.3.0
+      <div class="version-title">Toolbox 1.3.1</div>
+      <a class="btn" href="https://github.com/IVPCodes/IVP-Code/releases/download/Toolbox1.3.1/Toolbox1.3.1Installer.exe">
+        Download
       </a>
     </div>
 
@@ -252,17 +181,13 @@ Info Panel
 </div>
 
 <footer>
-  © 2026 IVPCodes — Toolbox Project
+  © 2026 IVPCodes — Toolbox
 </footer>
 
 <script>
 function toggleBox(id) {
-  var box = document.getElementById(id);
-  if (box.style.display === "none" || box.style.display === "") {
-    box.style.display = "block";
-  } else {
-    box.style.display = "none";
-  }
+  let box = document.getElementById(id);
+  box.style.display = (box.style.display === "block") ? "none" : "block";
 }
 </script>
 
